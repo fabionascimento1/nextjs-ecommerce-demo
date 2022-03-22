@@ -1,3 +1,4 @@
+import React from 'react'
 import * as S from './styles'
 
 import { FaSistrix, FaTimesCircle } from 'react-icons/fa'

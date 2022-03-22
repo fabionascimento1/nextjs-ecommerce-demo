@@ -1,3 +1,4 @@
+import React from 'react'
 import * as S from './styles'
 import Container from 'components/Container'
 import MenuItems from 'components/MenuItems'

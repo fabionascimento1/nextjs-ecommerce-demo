@@ -1,3 +1,4 @@
+import React from 'react'
 import Container from 'components/Container'
 import Heading from 'components/Heading'
 import Cart from 'components/Cart'

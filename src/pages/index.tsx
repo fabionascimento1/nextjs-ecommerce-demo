@@ -1,3 +1,4 @@
+import React from 'react'
 import SectionProducts from 'components/SectionProducts'
 import Meta from 'components/MetaContent'
 
