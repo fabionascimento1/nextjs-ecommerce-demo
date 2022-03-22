@@ -32,7 +32,6 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.h2<Props>`
-
   ${media.greaterThan('tablet')`
     margin: 7rem 0 1.5rem;
   `}
