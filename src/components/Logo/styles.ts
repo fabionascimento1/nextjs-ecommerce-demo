@@ -1,5 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { LogoProps } from './types'
 
-export const LogoWrapper = styled.img`
-  width: 10rem;
+export const Wrapper = styled.div<LogoProps>`
+  ${({ theme, color }) => css`
+    color: ${theme.colors[color!]};
+  `}
 `

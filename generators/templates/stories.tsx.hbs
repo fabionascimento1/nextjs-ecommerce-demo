@@ -1,22 +1,18 @@
-import {{pascalCase name}} from '.'
+import { default as Component{{pascalCase name}} } from '.'
 import { withDesign } from 'storybook-addon-designs'
 import { Meta } from '@storybook/react/types-6-0'
 
 export default {
   title: 'Main',
-  component: {{pascalCase name}},
-  decorators: [withDesign],
-  args: {
-    title: 'Value Default',
-    description: 'Value Default'
-  }
+  component: Component{{pascalCase name}},
+  decorators: [withDesign]
 } as Meta
 
-export const Basic = (args) => <{{pascalCase name}} {...args} />
+export const {{pascalCase name}} = (args) => <Component{{pascalCase name}} {...args} />
 
-Basic.parameters = {
+{{pascalCase name}}.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample'
+    url: 'https://www.figma.com/file/49wDRTdABuBGYUzXXxPuME/React-Ecommerce?node-id=2%3A11'
   }
 }
