@@ -1,5 +1,4 @@
 import { createGlobalStyle, css } from 'styled-components'
-import theme from './theme'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -39,29 +38,17 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  html {
-    font-family: ${theme.font.family};
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-  }
-  html, body, #__next {
-    height: 100%;
-  }
-  body {
-    font-size: ${theme.font.sizes.small};
-  }
-
-  /* ${({ theme }) => css`
+  ${({ theme }) => css`
     html {
-      font-family: ${theme.font.family};
       font-size: 62.5%;
       scroll-behavior: smooth;
     }
 
     body {
-      font-size: ${theme.font.sizes.small};
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.medium};
     }
-  `} */
+  `}
 `
 
 export default GlobalStyle
