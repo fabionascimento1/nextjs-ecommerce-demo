@@ -9,5 +9,9 @@ module.exports = {
     "@storybook/addon-interactions",
     "storybook-addon-designs"
   ],
-  "framework": "@storybook/react"
+  "framework": "@storybook/react",
+  webpackFinal: (config) => {
+    config.resolve.modules.push(`${process.cwd()}/src`)
+    return config
+  }
 }
