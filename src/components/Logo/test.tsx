@@ -21,4 +21,22 @@ describe('<Logo />', () => {
       color: '#FAFAFA'
     })
   })
+
+  it('should render a sizing Normal by default', () => {
+    renderWithTheme(<Logo size="normal" />)
+    expect(
+      screen.getByLabelText(/Ecommerce Demo In NextJS React/i).parentElement
+    ).toHaveStyle({
+      width: '17rem'
+    })
+  })
+
+  it('should render a sizing Large is passed', () => {
+    renderWithTheme(<Logo size="large" />)
+    expect(
+      screen.getByLabelText(/Ecommerce Demo In NextJS React/i).parentElement
+    ).toHaveStyle({
+      width: '27rem'
+    })
+  })
 })
