@@ -11,5 +11,18 @@
         "pragmaFrag": "React.Fragment"
       }
     ]
-  ]
+  ],
+  "env" : {
+    "test" : {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr" : false,
+            "displaName": false
+          }
+        ]
+      ]
+    }
+  }
 }
