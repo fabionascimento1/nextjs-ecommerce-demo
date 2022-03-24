@@ -1,6 +1,6 @@
 import { DefaultBreakpoints } from 'styled-media-query'
 
-type breakpoint = keyof DefaultBreakpoints
+export type breakpoint = keyof DefaultBreakpoints
 
 export type MediaMatchProps = {
   lessThan?: breakpoint
