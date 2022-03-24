@@ -1,6 +1,8 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
+import { AddShoppingCart } from '@styled-icons/material/AddShoppingCart'
+
 import Button from '.'
 
 describe('<Button />', () => {
@@ -36,5 +38,15 @@ describe('<Button />', () => {
     expect(screen.getByRole('button', { name: /Comprar agora/i })).toHaveStyle({
       width: '100%'
     })
+  })
+
+  it('should render an icon version', () => {
+    renderWithTheme(
+      <Button icon={<AddShoppingCart data-testid="icon" />}>
+        Comprar agora
+      </Button>
+    )
+    expect(screen.getByText(/Comprar agora/i)).toBeInTheDocument()
+    expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 })
