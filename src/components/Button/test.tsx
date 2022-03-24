@@ -12,4 +12,13 @@ describe('<Button />', () => {
       'font-size': '1.4rem'
     })
   })
+
+  it('should render the small size ', () => {
+    renderWithTheme(<Button size="small">Comprar agora</Button>)
+    expect(screen.getByRole('button', { name: /Comprar agora/i })).toHaveStyle({
+      height: '3rem',
+      padding: '0.8rem',
+      'font-size': '1.2rem'
+    })
+  })
 })
