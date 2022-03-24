@@ -16,6 +16,12 @@ export const Mobile = () => (
   <MediaMatch lessThan="medium">Only Mobile</MediaMatch>
 )
 
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1'
+  }
+}
+
 /* Component.parameters = {
   design: {
     type: 'figma',
