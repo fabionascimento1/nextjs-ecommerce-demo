@@ -79,7 +79,7 @@ export const Buy = styled.button`
     border-radius: ${theme.border.radius};
 
     ${media.lessThan('large')`
-      font-size: ${theme.font.sizes.xxsmall};
+      font-size: ${theme.font.sizes.xsmall};
       padding: 0.678rem 0;
     `}
 

@@ -76,7 +76,7 @@ export const Buy = styled.button`
     justify-content: center;
     transition: 180ms ease-in-out;
     font-size: ${theme.font.sizes.medium};
-    background-color: ${theme.colors.thirdy};
+    background-color: ${theme.colors.terciary};
     margin-bottom: ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
 

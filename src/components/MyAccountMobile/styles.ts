@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     a {
       color: ${theme.colors.black};
       margin-left: 5px;
-      font-size: ${theme.font.sizes.xxsmall};
+      font-size: ${theme.font.sizes.xsmall};
       text-decoration: none;
     }
     svg {

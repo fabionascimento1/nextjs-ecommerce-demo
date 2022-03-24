@@ -72,7 +72,7 @@ export const Buy = styled.button`
     cursor: pointer;
 
     ${media.lessThan('large')`
-      font-size: ${theme.font.sizes.xxsmall};
+      font-size: ${theme.font.sizes.xsmall};
       padding: 0.678rem 0;
     `}
 
