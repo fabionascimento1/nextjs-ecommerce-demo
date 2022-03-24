@@ -8,7 +8,13 @@ export default {
   decorators: [withDesign]
 } as Meta
 
-export const Desktop = () => <MediaMatch>Only Desktop</MediaMatch>
+export const Desktop = () => (
+  <MediaMatch greaterThan="medium">Only Desktop</MediaMatch>
+)
+
+export const Mobile = () => (
+  <MediaMatch lessThan="medium">Only Mobile</MediaMatch>
+)
 
 /* Component.parameters = {
   design: {
