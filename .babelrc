@@ -1,25 +1,26 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    "next/babel",
+    "@babel/preset-typescript"
+  ],
   "plugins": [
     [
-      "styled-components",
-      { "ssr": true, "displayName": true, "preprocess": false }
-    ],
-    [
-      "@babel/plugin-transform-react-jsx",
+      "babel-plugin-styled-components",
       {
-        "pragmaFrag": "React.Fragment"
+        "ssr": true,
+        "displayName": true
       }
     ]
   ],
-  "env" : {
-    "test" : {
+  "env": {
+    "test": {
       "plugins": [
         [
           "babel-plugin-styled-components",
           {
-            "ssr" : false,
-            "displaName": false
+            "ssr": false,
+            "displayName": false,
+            "namespace": "sc"
           }
         ]
       ]
