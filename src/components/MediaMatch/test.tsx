@@ -25,4 +25,10 @@ describe('<MediaMatch />', () => {
     expect(desktopHeading.parentElement).toHaveStyleRule('display', 'none')
     expect(mobileHeading.parentElement).toHaveStyleRule('display', 'none')
   })
+
+  it('should be show on Desktop', () => {
+    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'block', {
+      media: '(min-width: 768px)'
+    })
+  })
 })
