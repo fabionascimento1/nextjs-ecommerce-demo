@@ -1,15 +1,15 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styles/styled-media-query'
 
-import { Props } from '.'
+import { HeadingProps } from './types'
 
 const wrapperModifiers = {
   defaultColor: (theme: DefaultTheme) => css`
-    color: ${theme.colors.black};
+    color: ${theme.colors.primary};
   `,
 
   reverseColor: (theme: DefaultTheme) => css`
-    color: ${theme.colors.gray};
+    color: ${theme.colors.lightGray};
   `,
 
   lineLeft: (theme: DefaultTheme) => css`
@@ -22,7 +22,7 @@ const wrapperModifiers = {
     margin-bottom: ${theme.spacings.medium};
     &::after {
       content: ' ';
-      border-bottom: 5px solid ${theme.colors.primary};
+      border-bottom: 0.5rem solid ${theme.colors.secondary};
       width: 5rem;
       position: absolute;
       left: 0;
@@ -31,7 +31,7 @@ const wrapperModifiers = {
   `
 }
 
-export const Wrapper = styled.h2<Props>`
+export const Wrapper = styled.h2<HeadingProps>`
   ${media.greaterThan('tablet')`
     margin: 7rem 0 1.5rem;
   `}
@@ -42,10 +42,10 @@ export const Wrapper = styled.h2<Props>`
 
   ${({ theme, reverseColor, lineBottom }) => css`
     padding-left: 1rem;
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.xlarge};
 
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.large};
+      font-size: ${theme.font.sizes.xxlarge};
     `}
 
     ${!reverseColor && wrapperModifiers.defaultColor(theme)};

@@ -1,14 +1,8 @@
 import React from 'react'
-
+import { HeadingProps } from './types'
 import * as S from './styles'
 
-export type Props = {
-  reverseColor?: boolean
-  lineBottom?: boolean
-  children: string
-}
-
-const Heading: React.FC<Props> = ({
+const Heading: React.FC<HeadingProps> = ({
   reverseColor = false,
   lineBottom = false,
   children
