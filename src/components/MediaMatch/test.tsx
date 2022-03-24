@@ -31,4 +31,10 @@ describe('<MediaMatch />', () => {
       media: '(min-width: 768px)'
     })
   })
+
+  it('should be show on Mobile', () => {
+    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'block', {
+      media: '(max-width: 768px)'
+    })
+  })
 })
