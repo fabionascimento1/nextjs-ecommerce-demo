@@ -1,38 +1,47 @@
 import styled, { css } from 'styled-components'
-import media from 'styles/styled-media-query'
+import media from 'styled-media-query'
 
-export const MenuWrapper = styled.div`
+import { MenuFullProps } from './type'
+
+export const Wrapper = styled.menu`
   ${({ theme }) => css`
-    background: ${theme.colors.primary};
+    display: flex;
+    align-items: center;
+    padding: ${theme.spacings.small} 0;
+    position: relative;
+  `}
+`
+export const IconWrapper = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+  `}
+`
+
+export const LogoWrapper = styled.div`
+  ${media.lessThan('medium')`
     position: absolute;
-    top: 95px;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    pointer-events: none;
-    transform: translateY(1.25rem);
-    transition: all 0.3s cubic-bezier(0.82, 0.04, 0.2, 1);
-    padding: 1rem 1rem;
+    left: 50%;
+    transform: translate(-50%);
+  `}
+`
 
-    ${media.lessThan('tablet')`
-      display: none;
-    `}
+export const MenuGroup = styled.menu`
+  ${({ theme }) => css`
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
 
-    .list {
-      list-style: none;
-      position: relative;
-      display: flex;
-      justify-content: center;
-
-      .item {
-        border-bottom: 0;
-        margin-right: 2.25rem;
-        color: ${theme.colors.white};
-
-        a {
-          color: ${theme.colors.white};
-        }
-      }
+    > div {
+      margin-left: ${theme.spacings.xsmall};
     }
+  `}
+`
+
+export const MenuFull = styled.nav<MenuFullProps>`
+  ${({ isOpen }) => css`
+    opacity: ${isOpen ? 1 : 0};
   `}
 `

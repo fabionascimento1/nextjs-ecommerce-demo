@@ -12,7 +12,7 @@ import Logo from 'components/Logo'
 import Search from 'components/Search'
 import MyAccount from 'components/MyAccountDesktop'
 import MiniCart from 'components/MiniCart'
-import Menu from 'components/Menu'
+import Menu from 'components/Menux'
 
 function Header() {
   const { menu } = useSelector((state: AppState) => state.menu)
