@@ -33,6 +33,7 @@ export const MenuGroup = styled.menu`
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+    align-items: center;
 
     > div {
       margin-left: ${theme.spacings.xsmall};
@@ -51,9 +52,12 @@ export const MenuNav = styled.div`
 export const MenuLink = styled.a`
   ${({ theme }) => css`
     position: relative;
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.secondary};
     margin: 0.3rem ${theme.spacings.small} 0;
     text-align: center;
+    cursor: pointer;
+
     &:hover {
       &::after {
         content: '';

@@ -8,6 +8,7 @@ import { Close as CloseIcon } from '@styled-icons/material/Close'
 
 import Logo from 'components/Logo'
 import Button from 'components/Button'
+import MediaMatch from 'components/MediaMatch'
 
 import { MenuProps } from './type'
 
@@ -16,12 +17,23 @@ const Menu = ({ username }: MenuProps) => {
 
   return (
     <S.Wrapper>
-      <S.IconWrapper onClick={() => setIsOpen(true)}>
-        <MenuIcon aria-label="Abrir o menu" />
-      </S.IconWrapper>
+      <MediaMatch lessThan="medium">
+        <S.IconWrapper onClick={() => setIsOpen(true)}>
+          <MenuIcon aria-label="Abrir o menu" />
+        </S.IconWrapper>
+      </MediaMatch>
+
       <S.LogoWrapper>
         <Logo hideOnMobile data-testid="LogoMenu" />
       </S.LogoWrapper>
+
+      <MediaMatch greaterThan="medium">
+        <S.MenuNav>
+          <S.MenuLink>Novidades</S.MenuLink>
+          <S.MenuLink>Mais Vendidos</S.MenuLink>
+        </S.MenuNav>
+      </MediaMatch>
+
       <S.MenuGroup>
         <S.IconWrapper>
           <SearchIcon aria-label="Pesquisar" />
@@ -29,7 +41,14 @@ const Menu = ({ username }: MenuProps) => {
         <S.IconWrapper>
           <ShoppingCartIcon aria-label="Carrinho de compra" />
         </S.IconWrapper>
+
+        {!username && (
+          <MediaMatch greaterThan="medium">
+            <Button>Faça seu login</Button>
+          </MediaMatch>
+        )}
       </S.MenuGroup>
+
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="fechar menu" onClick={() => setIsOpen(false)} />
         <S.MenuNav>
