@@ -1,6 +1,8 @@
 import Menu from '.'
 import { withDesign } from 'storybook-addon-designs'
-import { Meta } from '@storybook/react/types-6-0'
+import { Meta, Story } from '@storybook/react/types-6-0'
+
+import { MenuProps } from './type'
 
 export default {
   title: 'Menu',
@@ -8,9 +10,13 @@ export default {
   decorators: [withDesign]
 } as Meta
 
-export const Component = (args) => <Menu {...args} />
+export const Component: Story<MenuProps> = (args) => <Menu {...args} />
 
 Component.parameters = {
+  layout: 'fullscreen',
+  backgrounds: {
+    default: 'dark'
+  },
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/49wDRTdABuBGYUzXXxPuME/React-Ecommerce?node-id=2%3A11'
