@@ -28,30 +28,37 @@ const wrapperModifiers = {
       left: 0;
       bottom: -1rem;
     }
-  `
-}
-
-export const Wrapper = styled.h2<HeadingProps>`
-  ${media.greaterThan('tablet')`
-    margin: 7rem 0 1.5rem;
-  `}
-
-  ${media.lessThan('tablet')`
-    margin: 2rem 0 1.5rem;
-  `}
-
-  ${({ theme, reverseColor, lineBottom }) => css`
-    padding-left: 1rem;
+  `,
+  small: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.medium};
+  `,
+  medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xlarge};
 
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xxlarge};
     `}
+  `
+}
+
+export const Wrapper = styled.h2<HeadingProps>`
+  ${({ theme, reverseColor, lineBottom, size }) => css`
+    padding-left: 1rem;
+
+    /* ${media.greaterThan('tablet')`
+    margin: 7rem 0 1.5rem;
+  `}
+
+  ${media.lessThan('tablet')`
+    margin: 2rem 0 1.5rem;
+  `} */
 
     ${!reverseColor && wrapperModifiers.defaultColor(theme)};
     ${reverseColor && wrapperModifiers.reverseColor(theme)};
 
     ${lineBottom && wrapperModifiers.lineBottom(theme)};
     ${!lineBottom && wrapperModifiers.lineLeft(theme)};
+
+    ${!!size && wrapperModifiers[size](theme)};
   `};
 `
