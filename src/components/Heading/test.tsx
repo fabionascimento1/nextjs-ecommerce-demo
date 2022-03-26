@@ -43,4 +43,15 @@ describe('<Heading/>', () => {
       modifier: '::after'
     })
   })
+
+  it('should render a heading  with a small size', () => {
+    renderWithTheme(
+      <Heading size="small">Ecommerce Demo In NextJS React</Heading>
+    )
+    expect(
+      screen.getByRole('heading', { name: /Ecommerce Demo In NextJS React/i })
+    ).toHaveStyle({
+      'font-size': '1.6rem'
+    })
+  })
 })
