@@ -13,7 +13,7 @@ export const Wrapper = styled.menu`
 `
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.primary};
     width: 2.4rem;
     height: 2.4rem;
     cursor: pointer;
@@ -53,7 +53,7 @@ export const MenuLink = styled.a`
   ${({ theme }) => css`
     position: relative;
     font-size: ${theme.font.sizes.small};
-    color: ${theme.colors.secondary};
+    color: ${theme.colors.primary};
     margin: 0.3rem ${theme.spacings.small} 0;
     text-align: center;
     cursor: pointer;
