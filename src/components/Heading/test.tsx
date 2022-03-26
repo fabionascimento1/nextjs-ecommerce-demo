@@ -29,7 +29,7 @@ describe('<Heading/>', () => {
     expect(
       screen.getByRole('heading', { name: /Ecommerce Demo In NextJS React/i })
     ).toHaveStyle({
-      'border-left': '7px solid #6dfdfc'
+      'border-left': '0.7rem solid #460099'
     })
   })
 
@@ -39,7 +39,7 @@ describe('<Heading/>', () => {
     )
     expect(
       screen.getByRole('heading', { name: /Ecommerce Demo In NextJS React/i })
-    ).toHaveStyleRule('border-bottom', '0.5rem solid #6dfdfc', {
+    ).toHaveStyleRule('border-bottom', '0.5rem solid #460099', {
       modifier: '::after'
     })
   })
@@ -52,6 +52,11 @@ describe('<Heading/>', () => {
       screen.getByRole('heading', { name: /Ecommerce Demo In NextJS React/i })
     ).toHaveStyle({
       'font-size': '1.6rem'
+    })
+    expect(
+      screen.getByRole('heading', { name: /Ecommerce Demo In NextJS React/i })
+    ).toHaveStyleRule('width', '3rem', {
+      modifier: '::after'
     })
   })
 })

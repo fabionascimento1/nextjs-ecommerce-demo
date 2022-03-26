@@ -6,9 +6,15 @@ const Heading: React.FC<HeadingProps> = ({
   reverseColor = false,
   lineBottom = false,
   children,
-  size = 'medium'
+  size = 'medium',
+  lineColor = 'primary'
 }) => (
-  <S.Wrapper reverseColor={reverseColor} lineBottom={lineBottom} size={size}>
+  <S.Wrapper
+    reverseColor={reverseColor}
+    lineBottom={lineBottom}
+    size={size}
+    lineColor={lineColor}
+  >
     {children}
   </S.Wrapper>
 )

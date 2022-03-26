@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styles/styled-media-query'
 
-import { HeadingProps } from './types'
+import { HeadingProps, LineColors } from './types'
 
 const wrapperModifiers = {
   defaultColor: (theme: DefaultTheme) => css`
@@ -12,25 +12,29 @@ const wrapperModifiers = {
     color: ${theme.colors.lightGray};
   `,
 
-  lineLeft: (theme: DefaultTheme) => css`
-    border-left: 7px solid ${theme.colors.secondary};
+  lineLeft: (theme: DefaultTheme, lineColor: LineColors) => css`
+    border-left: 0.7rem solid ${theme.colors[lineColor]};
   `,
 
-  lineBottom: (theme: DefaultTheme) => css`
+  lineBottom: (theme: DefaultTheme, lineColor: LineColors) => css`
     padding-left: 0;
     position: relative;
     margin-bottom: ${theme.spacings.medium};
     &::after {
       content: ' ';
-      border-bottom: 0.5rem solid ${theme.colors.secondary};
+      border-bottom: 0.5rem solid ${theme.colors[lineColor]};
       width: 5rem;
       position: absolute;
       left: 0;
-      bottom: -1rem;
+      bottom: -0.5rem;
     }
   `,
   small: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.medium};
+
+    &::after {
+      width: 3rem;
+    }
   `,
   medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xlarge};
@@ -42,7 +46,7 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.h2<HeadingProps>`
-  ${({ theme, reverseColor, lineBottom, size }) => css`
+  ${({ theme, reverseColor, lineBottom, size, lineColor }) => css`
     padding-left: 1rem;
 
     /* ${media.greaterThan('tablet')`
@@ -56,8 +60,8 @@ export const Wrapper = styled.h2<HeadingProps>`
     ${!reverseColor && wrapperModifiers.defaultColor(theme)};
     ${reverseColor && wrapperModifiers.reverseColor(theme)};
 
-    ${lineBottom && wrapperModifiers.lineBottom(theme)};
-    ${!lineBottom && wrapperModifiers.lineLeft(theme)};
+    ${lineBottom && wrapperModifiers.lineBottom(theme, lineColor)};
+    ${!lineBottom && wrapperModifiers.lineLeft(theme, lineColor)};
 
     ${!!size && wrapperModifiers[size](theme)};
   `};
