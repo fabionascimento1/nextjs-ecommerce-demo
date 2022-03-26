@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from 'styles/styled-media-query'
+import media from 'styled-media-query'
 
 import { HeadingProps, LineColors } from './types'
 
@@ -48,14 +48,6 @@ const wrapperModifiers = {
 export const Wrapper = styled.h2<HeadingProps>`
   ${({ theme, reverseColor, lineBottom, size, lineColor }) => css`
     padding-left: 1rem;
-
-    /* ${media.greaterThan('tablet')`
-    margin: 7rem 0 1.5rem;
-  `}
-
-  ${media.lessThan('tablet')`
-    margin: 2rem 0 1.5rem;
-  `} */
 
     ${!reverseColor && wrapperModifiers.defaultColor(theme)};
     ${reverseColor && wrapperModifiers.reverseColor(theme)};
