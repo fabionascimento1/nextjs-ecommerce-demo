@@ -1,6 +1,6 @@
 import Button from '.'
 import { withDesign } from 'storybook-addon-designs'
-import { Meta } from '@storybook/react/types-6-0'
+import { Meta, Story } from '@storybook/react/types-6-0'
 import { AddShoppingCart } from '@styled-icons/material/AddShoppingCart'
 
 export default {
@@ -36,4 +36,12 @@ withIcon.args = {
   size: 'small',
   children: 'Comprar agora',
   icon: <AddShoppingCart />
+}
+
+export const asLink: Story = (args) => <Button {...args} />
+
+asLink.args = {
+  children: 'Comprar agora',
+  as: 'a',
+  href: '/link'
 }

@@ -24,10 +24,6 @@ const wrapperModifiers = {
     width: 100%;
   `,
   withIcon: (theme: DefaultTheme) => css`
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
     svg {
       width: 1.5rem;
 
@@ -40,12 +36,20 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.button<wrapperButtonProps>`
   ${({ theme, size, fullWidth, hasIcon }) => css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(180deg, #6dfdfc 0%, #1ed6ff 100%);
     color: ${theme.colors.primary};
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxsmall};
     font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background: linear-gradient(180deg, #1ed6ff 0%, #6dfdfc 100%);
+    }
 
     ${!!size && wrapperModifiers[size](theme)}
 
