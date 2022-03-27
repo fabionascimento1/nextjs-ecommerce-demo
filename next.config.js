@@ -1,18 +1,13 @@
-const withPlugins = require('next-compose-plugins')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withPWA = require('next-pwa')
-const optimizedImages = require('next-optimized-images')
-
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = withPlugins([
-  [
-    withPWA,
-    {
-      pwa: {
-        dest: 'public',
-        disable: !isProd
-      }
-    }
-  ],
-  optimizedImages
-])
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    disable: !isProd
+  },
+  images: {
+    domains: ['localhost', 'res.cloudinary.com']
+  }
+})
