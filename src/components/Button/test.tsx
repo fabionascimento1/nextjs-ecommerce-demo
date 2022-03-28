@@ -50,6 +50,24 @@ describe('<Button />', () => {
     expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 
+  it('should render an minimal version', () => {
+    renderWithTheme(
+      <Button icon={<AddShoppingCart data-testid="icon" />} minimal>
+        Comprar agora
+      </Button>
+    )
+    expect(screen.getByRole('button', { name: /comprar agora/i })).toHaveStyle({
+      background: 'none',
+      color: '#460099'
+    })
+
+    expect(
+      screen.getByRole('button', { name: /comprar agora/i })
+    ).toHaveStyleRule('background', 'none', {
+      modifier: ':hover'
+    })
+  })
+
   it('should render button a link', () => {
     renderWithTheme(
       <Button as="a" href="/link">
