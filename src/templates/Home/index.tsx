@@ -1,6 +1,7 @@
 import { Container } from 'components/Container'
 import Menu from 'components/Menu'
 import Footer from 'components/Footer'
+import Meta from 'components/MetaContent'
 import React from 'react'
 import Heading from 'components/Heading'
 import { HomeTemplateProps } from './types'
@@ -15,6 +16,11 @@ const Home = ({
   mostPopularGames
 }: HomeTemplateProps) => (
   <>
+    <Meta
+      title="Ecommerce Next React Demo"
+      seoDescription="Ecommerce Next React Demo"
+      seoTitle="Ecommerce Next React Demo"
+    />
     <Container>
       <Menu />
       <BannerSlider items={banners} />
