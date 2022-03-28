@@ -8,5 +8,13 @@ describe('<Home />', () => {
     renderWithTheme(<Home />)
 
     expect(screen.getByLabelText(/abrir o menu/i)).toBeInTheDocument()
+
+    expect(
+      screen.getByRole('heading', { name: /novidades/i })
+    ).toBeInTheDocument()
+
+    expect(
+      screen.getByRole('heading', { name: /Mais Populares/i })
+    ).toBeInTheDocument()
   })
 })
