@@ -3,7 +3,7 @@ import { withDesign } from 'storybook-addon-designs'
 import { Meta } from '@storybook/react/types-6-0'
 
 export default {
-  title: 'MediaMatch',
+  title: 'Components/MediaMatch',
   component: MediaMatch,
   decorators: [withDesign]
 } as Meta

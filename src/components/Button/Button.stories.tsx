@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { AddShoppingCart } from '@styled-icons/material/AddShoppingCart'
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   decorators: [withDesign],
   argTypes: {
@@ -17,13 +17,13 @@ export default {
   }
 } as Meta
 
-export const Component = (args) => <Button {...args} />
+export const Default = (args) => <Button {...args} />
 
-Component.args = {
+Default.args = {
   children: 'Comprar agora'
 }
 
-Component.parameters = {
+Default.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/49wDRTdABuBGYUzXXxPuME/React-Ecommerce?node-id=20%3A3'

@@ -4,14 +4,14 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { LogoProps } from './types'
 
 export default {
-  title: 'Logo',
+  title: 'Components/Logo',
   component: Logo,
   decorators: [withDesign]
 } as Meta
 
-export const Component: Story<LogoProps> = (args) => <Logo {...args} />
+export const Default: Story<LogoProps> = (args) => <Logo {...args} />
 
-Component.parameters = {
+Default.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/49wDRTdABuBGYUzXXxPuME/React-Ecommerce?node-id=5%3A8'

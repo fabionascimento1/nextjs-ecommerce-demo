@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { BannerProps } from './types'
 
 export default {
-  title: 'Banner',
+  title: 'Components/Banner',
   component: Banner,
   decorators: [withDesign],
   args: {
@@ -20,13 +20,13 @@ export default {
   }
 } as Meta
 
-export const Component: Story<BannerProps> = (args) => (
+export const Default: Story<BannerProps> = (args) => (
   <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
     <Banner {...args} />{' '}
   </div>
 )
 
-Component.parameters = {
+Default.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/49wDRTdABuBGYUzXXxPuME/React-Ecommerce?node-id=2%3A11'

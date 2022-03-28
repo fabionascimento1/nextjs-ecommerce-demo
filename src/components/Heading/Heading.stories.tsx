@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { HeadingProps } from './types'
 
 export default {
-  title: 'Heading',
+  title: 'Components/Heading',
   component: Heading,
   decorators: [withDesign],
   argTypes: {
@@ -14,13 +14,13 @@ export default {
   }
 } as Meta
 
-export const Component: Story<HeadingProps> = (args) => <Heading {...args} />
+export const Default: Story<HeadingProps> = (args) => <Heading {...args} />
 
-Component.args = {
+Default.args = {
   children: 'H2 Title'
 }
 
-Component.parameters = {
+Default.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/49wDRTdABuBGYUzXXxPuME/React-Ecommerce?node-id=5%3A9'

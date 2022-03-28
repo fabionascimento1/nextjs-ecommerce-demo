@@ -5,12 +5,12 @@ import { HighlightProps } from './types'
 import item from './mock'
 
 export default {
-  title: 'Highlight',
+  title: 'Components/Highlight',
   component: Highlight,
   args: { ...item }
 } as Meta<HighlightProps>
 
-export const Component: Story<HighlightProps> = (args) => (
+export const Default: Story<HighlightProps> = (args) => (
   <div style={{ maxWidth: '104rem' }}>
     <Highlight {...args} />
   </div>
