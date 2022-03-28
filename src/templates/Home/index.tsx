@@ -9,13 +9,15 @@ import BannerSlider from 'components/BannerSlider'
 import Highlight from 'components/Highlight'
 import GameCardSlider from 'components/GameCardSlider'
 
+import * as S from './styles'
+
 const Home = ({
   banners,
   newGames,
   mostPopularHighLight,
   mostPopularGames
 }: HomeTemplateProps) => (
-  <>
+  <S.Wrapper>
     <Meta
       title="Ecommerce Next React Demo"
       seoDescription="Ecommerce Next React Demo"
@@ -23,29 +25,38 @@ const Home = ({
     />
     <Container>
       <Menu />
-      <BannerSlider items={banners} />
+      <S.SectionBanner>
+        <BannerSlider items={banners} />
+      </S.SectionBanner>
     </Container>
 
-    <Container>
-      <Heading>Novidades</Heading>
-      <Highlight
-        {...mostPopularHighLight}
-        alignment="left"
-        floatImage="/img/red-dead-float.png"
-      />
-      <GameCardSlider items={newGames} color="black" />
-    </Container>
+    <S.SectionNews>
+      <Container>
+        <Heading>Novidades</Heading>
+        <Highlight
+          {...mostPopularHighLight}
+          alignment="left"
+          floatImage="/img/red-dead-float.png"
+        />
+        <GameCardSlider items={newGames} color="black" />
+      </Container>
+    </S.SectionNews>
 
     <Container>
-      <Heading>Mais Populares</Heading>
-      <Highlight {...mostPopularHighLight} />
-      <GameCardSlider items={mostPopularGames} color="black" />
+      <S.SectionMostPopular>
+        <Heading reverseColor lineColor="secondary">
+          Mais Populares
+        </Heading>
+
+        <Highlight {...mostPopularHighLight} />
+        <GameCardSlider items={mostPopularGames} color="black" />
+      </S.SectionMostPopular>
     </Container>
 
     <Container>
       <Footer />
     </Container>
-  </>
+  </S.Wrapper>
 )
 
 export default Home

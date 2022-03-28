@@ -27,6 +27,7 @@ export default {
     terciary: '#30cc83',
     mainBg: '#FFFFFF',
     boxBg: '#FAFAFA',
+    bgColor: '#4000f3',
     border: '#eee',
     texts: '#333d4f',
     white: '#FAFAFA',

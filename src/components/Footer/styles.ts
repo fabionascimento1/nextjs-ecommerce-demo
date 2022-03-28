@@ -28,7 +28,7 @@ export const Column = styled.div`
     a,
     span {
       display: block;
-      color: ${darken(0.2, theme.colors.gray)};
+      color: ${darken(0.2, theme.colors.white)};
       text-decoration: none;
       margin-bottom: ${theme.spacings.xxsmall};
       font-size: ${theme.font.sizes.medium};

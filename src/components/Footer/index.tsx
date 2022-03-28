@@ -6,16 +6,16 @@ import * as S from './styles'
 
 const Footer = () => (
   <S.Wrapper>
-    <Logo />
+    <Logo color="white" />
     <S.Content>
       <S.Column>
-        <Heading size="small" lineBottom lineColor="secondary">
+        <Heading size="small" lineBottom lineColor="secondary" reverseColor>
           Contato
         </Heading>
         <a href="">agsuperpoder@gmail.com</a>
       </S.Column>
       <S.Column aria-labelledby="social-media">
-        <Heading size="small" lineBottom lineColor="secondary">
+        <Heading size="small" lineBottom lineColor="secondary" reverseColor>
           Follows
         </Heading>
         <nav id="social-media">
@@ -51,7 +51,7 @@ const Footer = () => (
       </S.Column>
 
       <S.Column aria-labelledby="resources">
-        <Heading lineColor="secondary" lineBottom size="small">
+        <Heading lineColor="secondary" lineBottom size="small" reverseColor>
           Links
         </Heading>
 
@@ -69,7 +69,7 @@ const Footer = () => (
       </S.Column>
 
       <S.Column aria-label="contact">
-        <Heading lineColor="secondary" lineBottom size="small">
+        <Heading lineColor="secondary" lineBottom size="small" reverseColor>
           Location
         </Heading>
         <span>Lorem ipsum dolor sit.</span>
