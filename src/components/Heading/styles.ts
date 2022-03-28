@@ -9,7 +9,7 @@ const wrapperModifiers = {
   `,
 
   reverseColor: (theme: DefaultTheme) => css`
-    color: ${theme.colors.lightGray};
+    color: ${theme.colors.secondary};
   `,
 
   lineLeft: (theme: DefaultTheme, lineColor: LineColors) => css`
@@ -41,6 +41,13 @@ const wrapperModifiers = {
 
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xxlarge};
+    `}
+  `,
+  huge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.xxlarge};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.huge};
     `}
   `
 }
