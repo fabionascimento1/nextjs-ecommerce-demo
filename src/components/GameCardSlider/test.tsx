@@ -1,4 +1,3 @@
-import 'session.mock'
 import 'match-media-mock'
 import { renderWithTheme } from 'utils/tests/helpers'
 import items from './mock'
