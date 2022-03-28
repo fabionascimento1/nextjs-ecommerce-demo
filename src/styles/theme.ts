@@ -57,5 +57,9 @@ export default {
     tablet: '750',
     desktop: '1000',
     hd: '1300'
+  },
+  transition: {
+    default: '0.3s ease-in-out',
+    fast: '0.1s ease-in-out'
   }
 }
