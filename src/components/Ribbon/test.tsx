@@ -5,7 +5,7 @@ import Ribbon from '.'
 
 describe('<Ribbon />', () => {
   it('should render the heading', () => {
-    const { container } = renderWithTheme(<Ribbon>Best Seller</Ribbon>)
+    renderWithTheme(<Ribbon>Best Seller</Ribbon>)
 
     expect(screen.getByText(/Best Seller/i)).toBeInTheDocument()
     //expect(container.firstChild).toMatchSnapshot()
