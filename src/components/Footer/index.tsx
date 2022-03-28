@@ -9,13 +9,13 @@ const Footer = () => (
     <Logo color="white" />
     <S.Content>
       <S.Column>
-        <Heading size="small" lineBottom lineColor="secondary" reverseColor>
+        <Heading size="small" lineBottom lineColor="secondary">
           Contato
         </Heading>
         <a href="">agsuperpoder@gmail.com</a>
       </S.Column>
       <S.Column aria-labelledby="social-media">
-        <Heading size="small" lineBottom lineColor="secondary" reverseColor>
+        <Heading size="small" lineBottom lineColor="secondary">
           Follows
         </Heading>
         <nav id="social-media">
@@ -51,7 +51,7 @@ const Footer = () => (
       </S.Column>
 
       <S.Column aria-labelledby="resources">
-        <Heading lineColor="secondary" lineBottom size="small" reverseColor>
+        <Heading lineColor="secondary" lineBottom size="small">
           Links
         </Heading>
 
@@ -69,7 +69,7 @@ const Footer = () => (
       </S.Column>
 
       <S.Column aria-label="contact">
-        <Heading lineColor="secondary" lineBottom size="small" reverseColor>
+        <Heading lineColor="secondary" lineBottom size="small">
           Location
         </Heading>
         <span>Lorem ipsum dolor sit.</span>

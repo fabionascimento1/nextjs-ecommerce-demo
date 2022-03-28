@@ -53,9 +53,11 @@ const Home = ({
       </S.SectionMostPopular>
     </Container>
 
-    <Container>
-      <Footer />
-    </Container>
+    <S.SectionFooter>
+      <Container>
+        <Footer />
+      </Container>
+    </S.SectionFooter>
   </S.Wrapper>
 )
 
