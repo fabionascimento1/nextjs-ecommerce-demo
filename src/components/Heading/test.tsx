@@ -20,7 +20,7 @@ describe('<Heading/>', () => {
     expect(
       screen.getByRole('heading', { name: /Ecommerce Demo In NextJS React/i })
     ).toHaveStyle({
-      color: '#CECECE'
+      color: '#6dfdfc'
     })
   })
 
