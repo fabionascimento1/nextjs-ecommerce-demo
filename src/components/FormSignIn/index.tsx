@@ -34,12 +34,12 @@ const FormSignIn = () => {
         </Link>
 
         <Button type="submit" size="large" fullWidth>
-          enviar
+          sign in now
         </Button>
 
         <FormLink>
           Don’t have an account?{' '}
-          <Link href="/sign-up">
+          <Link href="/signup" passHref>
             <a>Sign up</a>
           </Link>
         </FormLink>
