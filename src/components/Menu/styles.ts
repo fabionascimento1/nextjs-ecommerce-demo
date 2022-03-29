@@ -58,6 +58,7 @@ export const MenuLink = styled.a`
     margin: 0.3rem ${theme.spacings.small} 0;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       &::after {
@@ -65,7 +66,7 @@ export const MenuLink = styled.a`
         position: absolute;
         display: block;
         height: 0.3rem;
-        background-color: ${theme.colors.primary};
+        background-color: ${theme.colors.secondary};
         animation: hoverAnimation 0.2s forwards;
       }
       @keyframes hoverAnimation {
