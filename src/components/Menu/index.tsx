@@ -11,6 +11,7 @@ import Button from 'components/Button'
 import MediaMatch from 'components/MediaMatch'
 
 import { MenuProps } from './type'
+import Link from 'next/link'
 
 const Menu = ({ username }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -44,7 +45,9 @@ const Menu = ({ username }: MenuProps) => {
 
         {!username && (
           <MediaMatch greaterThan="medium">
-            <Button>Faça seu login</Button>
+            <Link href="/signin">
+              <Button as="a">Faça seu login</Button>
+            </Link>
           </MediaMatch>
         )}
       </S.MenuGroup>
@@ -63,9 +66,11 @@ const Menu = ({ username }: MenuProps) => {
         </S.MenuNav>
         {!username && (
           <S.RegisterBox>
-            <Button fullWidth size="large">
-              Faça seu login
-            </Button>
+            <Link href="/signin">
+              <Button as="a" fullWidth size="large">
+                Faça seu login
+              </Button>
+            </Link>
             <span>or</span>
             <S.CreateAccount href="#" title="Crie seu cadastro de acesso">
               Crie sua conta com segurança
