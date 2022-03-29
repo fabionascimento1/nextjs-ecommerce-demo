@@ -45,7 +45,7 @@ const Menu = ({ username }: MenuProps) => {
 
         {!username && (
           <MediaMatch greaterThan="medium">
-            <Link href="/signin">
+            <Link href="/signin" passHref>
               <Button as="a">Faça seu login</Button>
             </Link>
           </MediaMatch>
@@ -66,15 +66,17 @@ const Menu = ({ username }: MenuProps) => {
         </S.MenuNav>
         {!username && (
           <S.RegisterBox>
-            <Link href="/signin">
+            <Link href="/signin" passHref>
               <Button as="a" fullWidth size="large">
                 Faça seu login
               </Button>
             </Link>
             <span>or</span>
-            <S.CreateAccount href="#" title="Crie seu cadastro de acesso">
-              Crie sua conta com segurança
-            </S.CreateAccount>
+            <Link href="/signup" passHref>
+              <S.CreateAccount title="Crie seu cadastro de acesso">
+                Crie sua conta com segurança
+              </S.CreateAccount>
+            </Link>
           </S.RegisterBox>
         )}
       </S.MenuFull>
