@@ -9,6 +9,8 @@ import Highlight from 'components/Highlight'
 import GameCardSlider from 'components/GameCardSlider'
 
 import * as S from './styles'
+import Showcase from 'components/Showcase'
+import Base from 'templates/Base'
 
 const Home = ({
   banners,
@@ -16,25 +18,22 @@ const Home = ({
   mostPopularHighLight,
   mostPopularGames
 }: HomeTemplateProps) => (
-  <S.Wrapper>
+  <Base>
     <Container>
-      <Menu />
       <S.SectionBanner>
         <BannerSlider items={banners} />
       </S.SectionBanner>
     </Container>
 
     <S.SectionNews>
-      <Container>
-        <Heading>Novidades</Heading>
-        <Highlight
-          {...mostPopularHighLight}
-          alignment="left"
-          floatImage="/img/red-dead-float.png"
-        />
-        <GameCardSlider items={newGames} color="black" />
-      </Container>
+      <Showcase title="Novidades" games={newGames}></Showcase>
     </S.SectionNews>
+
+    <Showcase
+      title="Free Games"
+      highlight={mostPopularHighLight}
+      games={mostPopularGames}
+    />
 
     <Container>
       <S.SectionMostPopular>
@@ -46,13 +45,7 @@ const Home = ({
         <GameCardSlider items={mostPopularGames} color="black" />
       </S.SectionMostPopular>
     </Container>
-
-    <S.SectionFooter>
-      <Container>
-        <Footer />
-      </Container>
-    </S.SectionFooter>
-  </S.Wrapper>
+  </Base>
 )
 
 export default Home
