@@ -91,7 +91,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
 
 .c1 {
   padding-left: 1rem;
-  color: #6dfdfc;
+  color: #460099;
   padding-left: 0;
   position: relative;
   margin-bottom: 3.2rem;
@@ -100,7 +100,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
 
 .c1::after {
   content: ' ';
-  border-bottom: 0.5rem solid #460099;
+  border-bottom: 0.5rem solid #6dfdfc;
   width: 5rem;
   position: absolute;
   left: 0;
@@ -125,8 +125,8 @@ exports[`<GameInfo /> should render game informations 1`] = `
   padding: 0 2.4rem;
   height: 3.6rem;
   right: -2rem;
-  background-color: #6dfdfc;
-  background-color: #6dfdfc;
+  background-color: #460099;
+  background-color: #460099;
 }
 
 .c3::before {
@@ -147,8 +147,8 @@ exports[`<GameInfo /> should render game informations 1`] = `
 }
 
 .c3::before {
-  border-left-color: #08fcfa;
-  border-top-color: #08fcfa;
+  border-left-color: #170033;
+  border-top-color: #170033;
 }
 
 .c0 {
@@ -238,7 +238,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
   </h2>
   <div
     class="c2 c3"
-    color="secondary"
+    color="primary"
   >
     210
   </div>

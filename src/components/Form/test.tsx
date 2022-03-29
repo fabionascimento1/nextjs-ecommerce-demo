@@ -23,14 +23,15 @@ describe('<Form />', () => {
         color: #6dfdfc;
         -webkit-text-decoration: none;
         text-decoration: none;
-        border-bottom: 0.1rem solid #6dfdfc;
+        border-bottom: 0.1rem solid #4000f3;
+        color: #4000f3;
         -webkit-transition: color,border,0.1s ease-in-out;
         transition: color,border,0.1s ease-in-out;
       }
 
       .c0 a:hover {
-        color: #3bfcfb;
-        border-bottom: 0.1rem solid #3bfcfb;
+        color: #3300c0;
+        border-bottom: 0.1rem solid #3300c0;
       }
 
       <body>
