@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 import { HeadingProps, LineColors } from './types'
 
-const wrapperModifiers = {
+export const wrapperModifiers = {
   defaultColor: (theme: DefaultTheme) => css`
     color: ${theme.colors.primary};
   `,
