@@ -1,6 +1,6 @@
 import { TextContentProps } from './types'
 
-const TextContentMock: TextContentProps = {
+export const TextContentMock: TextContentProps = {
   title: 'Description',
   content: `<h1>Heading</h1>
 <h2>Heading</h2>
@@ -44,7 +44,7 @@ const TextContentMock: TextContentProps = {
   <li>Lorem ipsum</li>
 </ol>
 
-<p>
+<p class="description__copyrights">
   A <a href="#">Link inside the text</a> with Lorem ipsum dolor sit,
   amet consectetur adipisicing elit. Quia praesentium cupiditate tenetur
   quam illum. Fugiat consectetur assumenda in, vitae nemo, eaque quia
