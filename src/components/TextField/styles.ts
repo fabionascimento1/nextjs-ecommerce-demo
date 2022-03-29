@@ -1,6 +1,6 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 
-import { TextFieldProps } from '.'
+import { TextFieldProps } from './types'
 
 type IconPositionProps = Pick<TextFieldProps, 'iconPosition'>
 
