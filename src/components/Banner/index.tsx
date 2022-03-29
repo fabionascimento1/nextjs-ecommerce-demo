@@ -1,5 +1,6 @@
 import Button from 'components/Button'
 import Ribbon from 'components/Ribbon'
+import Link from 'next/link'
 import React from 'react'
 import * as S from './styles'
 
@@ -26,9 +27,11 @@ const Banner = ({
     <S.Caption>
       <S.Title>{title}</S.Title>
       <S.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-      <Button as="a" href={buttonLink} size="large">
-        {buttonLabel}
-      </Button>
+      <Link href={buttonLink} passHref>
+        <Button as="a" size="large">
+          {buttonLabel}
+        </Button>
+      </Link>
     </S.Caption>
   </S.Wrapper>
 )

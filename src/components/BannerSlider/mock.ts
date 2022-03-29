@@ -4,7 +4,7 @@ export default [
     title: 'Defy death 1',
     subtitle: '<p>Play the new <strong>CrashLands</strong> season',
     buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
+    buttonLink: 'http://localhost:3000/game/cyberpunk-2077',
     ribbon: 'Bestselling'
   },
   {
