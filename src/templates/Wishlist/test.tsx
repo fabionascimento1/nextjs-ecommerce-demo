@@ -24,8 +24,23 @@ describe('<Wishlist />', () => {
     renderWithTheme(<Wishlist {...props} />)
 
     expect(
-      screen.getByRole('heading', { name: /wishlist/i })
+      screen.getByRole('heading', { name: 'Wishlist' })
     ).toBeInTheDocument()
     expect(screen.getByTestId('Mock Showcase')).toBeInTheDocument()
+  })
+
+  it('should render empty when there are no games', () => {
+    renderWithTheme(
+      <Wishlist
+        recommendedGames={gamesMock}
+        recommendedHighlight={highlightMock}
+      />
+    )
+
+    expect(screen.queryByText(/population zero/i)).not.toBeInTheDocument()
+
+    expect(
+      screen.getByRole('heading', { name: 'Your wishlist is empty' })
+    ).toBeInTheDocument()
   })
 })
