@@ -5,6 +5,11 @@ import mockGame from './mock'
 export default {
   title: 'Game/GameInfo',
   component: GameInfo,
+  parameters: {
+    backgrounds: {
+      default: 'dark'
+    }
+  },
   args: mockGame
 } as Meta<GameInfoProps>
 
