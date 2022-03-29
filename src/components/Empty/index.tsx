@@ -3,12 +3,7 @@ import Link from 'next/link'
 
 import Button from 'components/Button'
 import * as S from './styles'
-
-export type EmptyProps = {
-  title: string
-  description: string
-  hasLink?: boolean
-}
+import { EmptyProps } from './types'
 
 const Empty = ({ title, description, hasLink }: EmptyProps) => (
   <S.Wrapper>
