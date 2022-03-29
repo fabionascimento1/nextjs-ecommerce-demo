@@ -10,13 +10,16 @@ import { Container } from 'components/Container'
 import * as S from './styles'
 import { HighlightProps } from 'components/Highlight/types'
 import { Swagger } from 'styled-icons/simple-icons'
+import { Grid } from 'components/Grid'
 
 export type WishlistTemplateProps = {
   recommendedGames: GameCardProps[]
   recommendedHighlight: HighlightProps
+  games?: GameCardProps[]
 }
 
 const Wishlist = ({
+  games,
   recommendedGames,
   recommendedHighlight
 }: WishlistTemplateProps) => {
@@ -26,6 +29,12 @@ const Wishlist = ({
         <Heading lineLeft lineColor="secondary">
           Wishlist
         </Heading>
+
+        <Grid>
+          {games?.map((game, index) => (
+            <GameCard key={`wishlist-${index}`} {...game} />
+          ))}
+        </Grid>
         <Divider />
       </Container>
 
