@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -12,9 +12,15 @@ import TextField from 'components/TextField'
 import * as S from './styles'
 
 const FormSignIn = () => {
+  const handleSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
+    event.preventDefault()
+    console.log('form...')
+  }
   return (
     <FormWrapper>
-      <form>
+      <form onSubmit={handleSubmit}>
         <TextField
           name="email"
           placeholder="Email"
