@@ -7,7 +7,11 @@ export const Wrapper = styled.main`
     background: ${theme.colors.white};
   `}
 `
-
+export const Body = styled.div`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.small};
+  `}
+`
 export const Footer = styled.div`
   ${({ theme }) => css`
     background: ${tint(0.2, theme.colors.lightGray)};
