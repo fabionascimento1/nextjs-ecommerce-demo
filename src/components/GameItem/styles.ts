@@ -79,7 +79,7 @@ export const Price = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     padding: 0.2rem ${theme.spacings.xxsmall};
-    background-color: ${theme.colors.secondary};
+    background-color: ${theme.colors.primary};
     border-radius: ${theme.border.radius};
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.bold};
