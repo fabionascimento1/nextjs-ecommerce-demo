@@ -46,7 +46,11 @@ const Menu = ({ username }: MenuProps) => {
           <SearchIcon aria-label="Pesquisar" />
         </S.IconWrapper>
         <S.IconWrapper>
-          <ShoppingCartIcon aria-label="Carrinho de compra" />
+          <Link href="/cart" passHref>
+            <a>
+              <ShoppingCartIcon aria-label="Carrinho de compra" />
+            </a>
+          </Link>
         </S.IconWrapper>
 
         {!username && (
