@@ -21,7 +21,7 @@ const PaymentOptions = ({ cards, handlePayment }: PaymentOptionsProps) => {
   return (
     <S.Wrapper>
       <S.Body>
-        <Heading color="black" size="small" lineBottom>
+        <Heading size="small" lineBottom>
           Payment
         </Heading>
 
