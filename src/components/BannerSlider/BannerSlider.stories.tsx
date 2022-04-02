@@ -9,7 +9,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'won-dark'
+      default: 'dark'
     }
   }
 } as Meta<BannerSliderProps>
