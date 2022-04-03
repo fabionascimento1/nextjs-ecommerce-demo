@@ -31,3 +31,14 @@ Default.args = {
   total: 'R$ 330,00',
   items: items
 }
+
+export const WithButton: Story = (args) => (
+  <div style={{ maxWidth: 800 }}>
+    <CartList {...args} hasButton />
+  </div>
+)
+
+WithButton.args = {
+  total: 'R$ 330,00',
+  items: items
+}

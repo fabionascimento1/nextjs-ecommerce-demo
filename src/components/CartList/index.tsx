@@ -8,9 +8,10 @@ import Empty from 'components/Empty'
 export type CartListProps = {
   items?: GameItemProps[]
   total?: string
+  hasButton?: boolean
 }
 
-const CartList = ({ items, total }: CartListProps) => {
+const CartList = ({ items, total, hasButton = false }: CartListProps) => {
   return (
     <S.Wrapper isEmpty={!items.length} data-cy="cart-list">
       {items.length ? (
@@ -22,11 +23,14 @@ const CartList = ({ items, total }: CartListProps) => {
           </S.GamesList>
 
           <S.Footer>
-            <S.Total>{total}</S.Total>
+            {!hasButton && <span>Total:</span>}
 
-            <Link href="/cart" passHref>
-              <Button as="a">Buy it now</Button>
-            </Link>
+            <S.Total>{total}</S.Total>
+            {hasButton && (
+              <Link href="/cart" passHref>
+                <Button as="a">Buy it now</Button>
+              </Link>
+            )}
           </S.Footer>
         </>
       ) : (
