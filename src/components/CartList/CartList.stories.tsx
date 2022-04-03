@@ -42,3 +42,9 @@ WithButton.args = {
   total: 'R$ 330,00',
   items: items
 }
+
+export const Empty: Story<CartListProps> = () => (
+  <div style={{ maxWidth: 800 }}>
+    <CartList />
+  </div>
+)

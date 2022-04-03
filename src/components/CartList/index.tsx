@@ -11,7 +11,7 @@ export type CartListProps = {
   hasButton?: boolean
 }
 
-const CartList = ({ items, total, hasButton = false }: CartListProps) => {
+const CartList = ({ items = [], total, hasButton = false }: CartListProps) => {
   return (
     <S.Wrapper isEmpty={!items.length} data-cy="cart-list">
       {items.length ? (
