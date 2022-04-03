@@ -11,4 +11,10 @@ describe('<CartList />', () => {
     expect(screen.getAllByRole('heading')).toHaveLength(2)
     expect(screen.getByText('R$ 330,00')).toHaveStyle({ color: '#460099' })
   })
+
+  it('should render the button', () => {
+    renderWithTheme(<CartList items={items} total="R$ 330,00" hasButton />)
+
+    expect(screen.getByText(/buy it now/i)).toBeInTheDocument()
+  })
 })
