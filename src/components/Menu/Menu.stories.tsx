@@ -22,3 +22,9 @@ Default.parameters = {
     url: 'https://www.figma.com/file/49wDRTdABuBGYUzXXxPuME/React-Ecommerce?node-id=2%3A11'
   }
 }
+
+export const Logged: Story<MenuProps> = (args) => <Menu {...args} />
+
+Logged.args = {
+  username: 'John Doe'
+}
